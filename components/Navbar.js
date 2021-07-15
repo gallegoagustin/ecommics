@@ -64,13 +64,13 @@ const Nav = ({ theme}) => {
                 {/* <button onClick={() => props.themeToggle()}>Cambiar modo</button> */}
                     <Link href="/" passHref replace>
                         <StyledLogo>{theme === "light" 
-                        ? <img style={{width:"150px"}} src={logo} /> 
-                        : <img style={{width:"150px"}} src={logoWhite} />}
+                        ? <Image style={{width:"150px"}} src="https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo.svg" /> 
+                        : <Image style={{width:"150px"}} src="https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo-white.svg" />}
                         </StyledLogo>
                     </Link>
                     <Link href="/" passHref replace>
                         <StyledLogoResponsive>
-                        <img style={{height:"35px"}} src={logoResponsive} />
+                        <Image style={{height:"35px"}} src="/ecommics-logo-responsive.svg" />
                         </StyledLogoResponsive>
                     </Link>
                     <Link href="/search" passHref replace>
