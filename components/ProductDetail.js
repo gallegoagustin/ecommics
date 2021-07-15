@@ -10,6 +10,7 @@ import {
 } from '../store/actions/normalUsersActions'
 import { HeartIcon, ShoppingCartIcon } from '@heroicons/react/outline'
 import Link from 'next/link';
+import Image from 'next/image'
 
 const Father = styled.div`
     width: 100%;
@@ -234,7 +235,7 @@ const ProductDetail = ({id}) => {
                             <BackLink>&#60; búsqueda</BackLink>
                         </Link>
                         <ImageView>
-                            <img style={{marginTop: "30px", maxWidth: "100%", maxHeight: "800px"}} src={detail.image}></img>
+                            <Image style={{marginTop: "30px", maxWidth: "100%", maxHeight: "800px"}} src={detail.image}/>
                         </ImageView>
                     </ImageConteiner>
                     <InfoConteiner>
@@ -270,7 +271,7 @@ const ProductDetail = ({id}) => {
                     {
                     detail.questions.length ? 
                         detail.questions.map(q => { 
-                            return <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+                            return <div key={q.created_at} style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                                 <Question>
                                     {q.content}
                                     <span style={{marginTop: "10px", fontSize: "1rem", color: "#161D2F"}}>Pregunta de {q.userNickname} ({q.created_at}) {q.answer ? <span>(respondido)</span> : <span>(pendiente de respuesta)</span>}</span>

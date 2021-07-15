@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from 'next/image'
 
 
 const FooterContainer = styled.div`
@@ -83,13 +84,16 @@ export const Icon = styled.i`
 `
 
 const Footer = () => {
+
+    const logoWhite = "https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo-white.svg";
+
     return (
 <FooterContainer>
             <StyledContainer>
                 <FooterRow>
                     <FooterColumn>
                         <FooterTitle>
-                            <img style={{width:"150px", marginLeft: "-10px"}} src={"https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo-white.svg"}/>
+                            <Image style={{width:"150px", marginLeft: "-10px"}} src={logoWhite}/>
                         </FooterTitle>
                            <StyledCopyright>Copyright © 2021 Ecommics</StyledCopyright> 
                     </FooterColumn>

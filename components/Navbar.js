@@ -8,7 +8,7 @@ import UserMenu from './user-panel/UserMenu.js';
 import Modal from './user-panel/Modal.js';
 import React, {useState} from 'react';
 import { useRouter } from 'next/router';
-
+import Image from 'next/image'
 
 const Navbar = styled.nav`
     min-height: 80px;
@@ -46,6 +46,10 @@ const Nav = ({ theme}) => {
     const [showModal, setShowModal] = useState(false);
     const dispatch = useDispatch()
 
+    const logo = "https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo.svg";
+
+    const logoWhite = "https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo-white.svg";
+
     const userData = useSelector(state => state.user.userData)
 
     function handleSignOut() {
@@ -58,10 +62,9 @@ const Nav = ({ theme}) => {
                 {/* <button onClick={() => props.themeToggle()}>Cambiar modo</button> */}
                     <Link href="/" passHref replace>
                         <StyledLogo>{theme === "light" 
-                        ? <img style={{width:"150px"}} src={"https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo.svg"} /> 
-                        : <img style={{width:"150px"}} src={"https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo-white.svg"} />}
+                        ? <Image style={{width:"150px"}} src={logo} /> 
+                        : <Image style={{width:"150px"}} src={logoWhite} />}
                         </StyledLogo>
-                        {/* <StyledLink><img style={{width:"150px"}} src={"https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo.svg"} /></StyledLink> */}
                     </Link>
                     <Link href="/" passHref replace>
                         <StyledLogoResponsive>
