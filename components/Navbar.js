@@ -64,8 +64,8 @@ const Nav = ({ theme}) => {
                 {/* <button onClick={() => props.themeToggle()}>Cambiar modo</button> */}
                     <Link href="/" passHref replace>
                         <StyledLogo>{theme === "light" 
-                        ? <Image layout="fill" width={150} src='/ecommics-logo.svg' alt="logo"/> 
-                        : <Image layout="fill" width={150} src={'/ecommics-logo.svg'} alt="logo"/>}
+                        ? <div style={{width: "150px"}}><Image layout="fill" src='/ecommics-logo.svg' alt="logo"/></div>
+                        : <div style={{width: "150px"}}><Image layout="fill" src={'/ecommics-logo.svg'} alt="logo"/></div>}
                         </StyledLogo>
                     </Link>
                     <Link href="/" passHref replace>
