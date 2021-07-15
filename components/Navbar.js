@@ -64,13 +64,13 @@ const Nav = ({ theme}) => {
                 {/* <button onClick={() => props.themeToggle()}>Cambiar modo</button> */}
                     <Link href="/" passHref replace>
                         <StyledLogo>{theme === "light" 
-                        ? <Image style={{width:"150px"}} src={logo} /> 
-                        : <Image style={{width:"150px"}} src={logoWhite} />}
+                        ? <img style={{width:"150px"}} src={logo} /> 
+                        : <img style={{width:"150px"}} src={logoWhite} />}
                         </StyledLogo>
                     </Link>
                     <Link href="/" passHref replace>
                         <StyledLogoResponsive>
-                        <Image style={{height:"35px"}} src={logoResponsive} />
+                        <img style={{height:"35px"}} src={logoResponsive} />
                         </StyledLogoResponsive>
                     </Link>
                     <Link href="/search" passHref replace>
