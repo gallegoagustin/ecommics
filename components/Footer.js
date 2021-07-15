@@ -93,7 +93,7 @@ const Footer = () => {
                 <FooterRow>
                     <FooterColumn>
                         <FooterTitle>
-                            <Image style={{width:"150px", marginLeft: "-10px"}} src={logoWhite}/>
+                            {/* <Image style={{width:"150px", marginLeft: "-10px"}} src={logoWhite}/> */}
                         </FooterTitle>
                            <StyledCopyright>Copyright © 2021 Ecommics</StyledCopyright> 
                     </FooterColumn>
