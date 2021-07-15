@@ -5,7 +5,7 @@ import Filters from '../../components/Filters'
 
 export function getProducts (payload) {
     return (dispatch) => {
-    axios.get(`/api/products`)
+    axios.get(`/api/products/get`)
     .then(r => dispatch({ type: product.GET_PRODUCTS, payload: r.data }))
     }
 }
@@ -141,7 +141,7 @@ export function resetFilters() {
 
 export function getFilteredProducts (payload) {
     return(dispatch) => {
-        axios.post(`${process.env.NEXT_PUBLIC_LOCALHOST}/api/products/get`, payload)
+        axios.post(`/api/products/get`, payload)
         .then(r => dispatch({ type: filter.GET_FILTERING_PRODUCTS, payload: r.data }))
     }
 }
