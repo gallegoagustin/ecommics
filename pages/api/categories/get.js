@@ -1,6 +1,9 @@
 import Category from '../../../server/models/Category'
+import dbConnect from '../../../utils/dbConnect'
 
 export default async (req, res) => {
+
+    await dbConnect();
     
     try {
         const categoriesNames = await Category.find({},'title');
