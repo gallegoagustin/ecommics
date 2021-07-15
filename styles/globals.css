@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html,
+body {
+    font-family: Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
+  }
+
+
+  .menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .active {
+    color: #0096FF;
+
+  }
+
+  .findIcon {
+    width: 10px;
+  }
+
+  .cartIcon {
+    width: 20px;
+  }
+
+  .addFavIcon {
+    width: 20px;
+  }
+
+  .addCartIcon {
+    width: 20px;
+  }
+
+  @media (max-width: 480px) {
+    .findIcon {
+      width: 10px;
+    }
+    .findItem{
+      order: 5;
+      margin: 0 auto;
+    }
+    .findItemMargin{
+      margin: 10px 0px;
+    }
+  }
+
+
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.SliderContainer {
+  width: 70%;
+  margin: 3rem auto;
+}
+
+.slide img {
+  width: 100%;
+  margin: 0 auto;
+}
+/* 
+@media (max-width: 960px){
+  .slide img {
+    width: 15rem;
+    margin: 0 auto;
+  }
+  }
+  @media (max-width: 640px){
+    .slide img {
+      width: 10rem;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 480px){
+    .slide img {
+      width: 6rem;
+      margin: 0 auto;
+    }
+  } */
+
+.slide {
+  transform: scale(0.2);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+
+.activeSlide {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.arrow {
+  background-color: #fff;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow svg {
+  transition: color 300ms;
+}
+
+.arrow svg:hover {
+  color: #68edff;
+}
+
+.next {
+  right: 0%;
+  top: 50%;
+}
+
+.prev {
+  left: 0%;
+  top: 50%;
+}
