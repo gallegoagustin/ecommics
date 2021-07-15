@@ -50,6 +50,8 @@ const Nav = ({ theme}) => {
 
     const logoWhite = "https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo-white.svg";
 
+    const logoResponsive = "/ecommics-logo-responsive.svg";
+
     const userData = useSelector(state => state.user.userData)
 
     function handleSignOut() {
@@ -68,7 +70,7 @@ const Nav = ({ theme}) => {
                     </Link>
                     <Link href="/" passHref replace>
                         <StyledLogoResponsive>
-                        <img style={{height:"35px"}} src={"/ecommics-logo-responsive.svg"} />
+                        <Image style={{height:"35px"}} src={logoResponsive} />
                         </StyledLogoResponsive>
                     </Link>
                     <Link href="/search" passHref replace>
