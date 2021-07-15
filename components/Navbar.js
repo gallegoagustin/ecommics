@@ -40,6 +40,13 @@ const StyledLogo = styled.a`
     }
 `
 
+const StyledImage = styled.img`
+    width: 150px;
+`
+
+const StyledResponsive = styled.img`
+    width: 35px;
+`
 
 const Nav = ({ theme}) => {
     const router = useRouter();
@@ -64,13 +71,13 @@ const Nav = ({ theme}) => {
                 {/* <button onClick={() => props.themeToggle()}>Cambiar modo</button> */}
                     <Link href="/" passHref replace>
                         <StyledLogo>{theme === "light" 
-                        ? <div style={{width: "150px"}}><Image layout="fill" objectFit="contain" src='https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo.svg' alt="logo"/></div>
-                        : <div style={{width: "150px"}}><Image layout="fill" objectFit="contain" src={'https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo-white.svg'} alt="logo"/></div>}
+                            ? <StyledImage src='https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo.svg' alt="logo"/>
+                            : <StyledImage src={'https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo-white.svg'} alt="logo"/>}
                         </StyledLogo>
                     </Link>
                     <Link href="/" passHref replace>
                         <StyledLogoResponsive>
-                        <Image layout="fill" objectFit="contain" height={35} src={'/ecommics-logo-responsive.svg'} alt="logo"/>
+                            <StyledResponsive src={'/ecommics-logo-responsive.svg'} alt="logo"/>
                         </StyledLogoResponsive>
                     </Link>
                     <Link href="/search" passHref replace>

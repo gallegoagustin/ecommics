@@ -200,6 +200,12 @@ const Separator = styled.div`
     background-color: #161D2F;
 `
 
+const StyledImage = styled.img`
+    margin-top: 30px;
+    max-width: 100%;
+    max-height: 800px;
+`
+
 const ProductDetail = ({id}) => {
     useEffect(() => {
         return () => {
@@ -235,7 +241,7 @@ const ProductDetail = ({id}) => {
                             <BackLink>&#60; búsqueda</BackLink>
                         </Link>
                         <ImageView>
-                            <Image style={{marginTop: "30px", maxWidth: "100%", maxHeight: "800px"}} src={detail.image}/>
+                            <StyledImage src={detail.image[0]}/>
                         </ImageView>
                     </ImageConteiner>
                     <InfoConteiner>

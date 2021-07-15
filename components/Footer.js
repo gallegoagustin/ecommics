@@ -83,6 +83,11 @@ export const Icon = styled.i`
     margin-right: 16px;
 `
 
+const StyledImage = styled.img`
+    width: 150px;
+    margin-left: -10px;
+`
+
 const Footer = () => {
 
     const logoWhite = "https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo-white.svg";
@@ -93,7 +98,7 @@ const Footer = () => {
                 <FooterRow>
                     <FooterColumn>
                         <FooterTitle>
-                            {/* <Image style={{width:"150px", marginLeft: "-10px"}} src={logoWhite}/> */}
+                            <StyledImage src={logoWhite}/>
                         </FooterTitle>
                            <StyledCopyright>Copyright © 2021 Ecommics</StyledCopyright> 
                     </FooterColumn>
