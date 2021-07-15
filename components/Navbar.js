@@ -62,15 +62,15 @@ const Nav = ({ theme}) => {
         <>
             <Navbar>
                 {/* <button onClick={() => props.themeToggle()}>Cambiar modo</button> */}
-                    {/* <Link href="/" passHref replace>
+                    <Link href="/" passHref replace>
                         <StyledLogo>{theme === "light" 
-                        ? <div style={{width: "150px"}}><Image layout="fill" src='/ecommics-logo.svg' alt="logo"/></div>
-                        : <div style={{width: "150px"}}><Image layout="fill" src={'/ecommics-logo.svg'} alt="logo"/></div>}
+                        ? <div style={{width: "150px"}}><Image layout="fill" objectFit="contain" src='https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo.svg' alt="logo"/></div>
+                        : <div style={{width: "150px"}}><Image layout="fill" objectFit="contain" src={'https://ecommics.s3.sa-east-1.amazonaws.com/images/ecommics-logo-white.svg'} alt="logo"/></div>}
                         </StyledLogo>
-                    </Link> */}
+                    </Link>
                     <Link href="/" passHref replace>
                         <StyledLogoResponsive>
-                        {/* <Image layout="fill" height={35} src={'/ecommics-logo-responsive.svg'} alt="logo"/> */}
+                        <Image layout="fill" objectFit="contain" height={35} src={'/ecommics-logo-responsive.svg'} alt="logo"/>
                         </StyledLogoResponsive>
                     </Link>
                     <Link href="/search" passHref replace>
